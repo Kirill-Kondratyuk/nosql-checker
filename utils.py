@@ -247,6 +247,7 @@ class NosqlChecker:
             Thread(target=self.check_couchdb, name='couch_db_check_thread'),
             Thread(target=self.check_docker, name='docker_check_thread'),
             Thread(target=self.check_hadoop, name='hadoop_check_thread'),
+            Thread(target=self.check_memcached, name='memcached_check_thread')
         ]
 
         for thread in threads:
